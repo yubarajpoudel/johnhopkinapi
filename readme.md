@@ -22,4 +22,6 @@ Easy Setup
  1. Give execute permission for ``` imagerun.sh ```
 
     ``` sudo chmod +x ./imagerun.sh ```
- 2. ./imagerun.sh
+ 2. Run script file
+
+    ``` ./imagerun.sh ```
