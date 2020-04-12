@@ -15,3 +15,11 @@ Easy Setup
  ``` http://127.0.0.1:8022/data/?type=global&at=04-09-2020 ```
 
  > Here the date is in the format of ```MM-DD-YYYY ``` and if date is not given it will give latest data
+
+ OR open the terminal and
+ ==============================
+
+ 1. Give execute permission for ``` imagerun.sh ```
+
+    ``` sudo chmod +x ./imagerun.sh ```
+ 2. ./imagerun.sh
