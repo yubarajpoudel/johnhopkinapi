@@ -4,8 +4,15 @@ MAINTAINER Yubaraj Poudel
 
 #get git and cron
 
-RUN apt-get update && apt-get install -y git && apt-get install -y cron
+COPY apt_req.txt .
+RUN apt-get update && \
+	apt-get install -y $(cat apt_req.txt) && \
+	rm -rf /var/lib/apt/lists/*
+	
 RUN git clone https://github.com/CSSEGISandData/COVID-19.git 
+
+HEALTHCHECK --interval=5s --timeout=3s --retries=3 \
+CMD curl -f http://localhost:8022/data || exit 1
 
 EXPOSE 8022
 
